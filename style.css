@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --whiteColor: white;
+    --blackColor: black;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+h1{
+    font-size: 4.2rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+p{
+    font-size: 1.4rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+body{
+    background: rgb(122, 104, 104);
+}
+
+
+input[type="button"]:focus, button:focus{
+    outline: none;
+}
+
+
+/*START | Navbar styles */
+
+.nav-container{
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.navbar{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+    background-color:  rgba(122, 104, 104, 0.7);
+    
+    border-bottom: 1px solid antiquewhite;
+    transform: translateY(-100%); /* normal, hidden state */
+    transition: 1s all ease;
+}
+
+.nav-container:hover .navbar {
+    transform: translateY(0); /* when parent is hovered */
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-header h2{
+    color: rgb(250, 218, 111);
+}
+
+.nav-items{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-items li{
+    padding: 1rem;
+}
+
+.nav-items li a{
+    color: var(--whiteColor);
+}
+
+.menu-toggle{
+    display: none;
+    border-radius: 1.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 1rem;
+    background: var(--blackColor);
+    border: 0.1rem solid var(--whiteColor);
+    color: var(--whiteColor);
+    transition: 0.5s all ease;
+}
+
+.menu-toggle:hover{
+    background: var(--whiteColor);
+    border-radius: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border: 0.1rem solid var(--blackColor);
+    color: var(--blackColor);
+}
+
+/*END | Navbar styles */
+
+
+/* Basic parent style */
+.parent{
+    min-height: 30rem;
+    width: 90%;
+    margin: 2rem 5%;
+    background: rgb(255, 255, 184);
+}
+
+/* Basic child style */
+.child{
+    background: cyan;
+    flex-basis: 15rem;
+    border: 0.1rem solid #333;
+    font-size: 2rem;
+    text-align: center;
+    padding: 6rem;
+}
+
+
+.child1{
+    min-height: 25rem;
+}
+
+/* Heading style */
+.heading{
+  color: var(--whiteColor);
+  margin: 4rem 0 1rem 4rem;
+}
+
+/* item span */
+.item-span{
+    font-size: 2rem;
+    color: var(--whiteColor);
+}
+
+.item-span #child7, 
+.item-span #child8, .item-span #grow,
+.item-span #child9, .item-span #order,
+.item-span #child10, .item-span #shrink{
+    font-size: 2rem;
+    background-color: var(--blackColor);
+    color: var(--whiteColor);
+}
+
+/* btn button div style */
+.btn-div{
+    width: 60%;
+    height: 10rem;
+    margin: 3rem 20%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* single btn div style */
+.single-btn-div{
+    color: var(--whiteColor);
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.single-btn-div input[type="button"] {
+    background: rgb(17, 2, 2);
+    border: 0.1rem solid var(--whiteColor);
+    color: var(--whiteColor);
+    border-radius: 1.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 1rem 1rem;
+    transition: 0.5s all ease;
+}
+
+.single-btn-div input[type="button"]:hover{
+    background: var(--whiteColor);
+    color: var(--blackColor);
+    border: 0.1rem solid var(--blackColor);
+    border-radius: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+
+/*  START | Parent-01 and childs*/
+.parent1{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/*  END | Parent-01 and childs*/
+
+
+/*  START | Parent-02 and childs*/
+.parent2{
+    display: flex;
+    align-items: flex-start;
+}
+
+/*  END | Parent-02 and childs*/
+
+
+/*  START | Parent-03 and childs*/
+.parent3{
+    display: flex;
+    flex-direction: row;
+}
+
+/*  END | Parent-03 and childs*/
+
+
+/*  START | Parent-04 and childs*/
+.parent4{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*  END | Parent-04 and childs*/
+
+
+/*  START | Parent-05 and childs*/
+.parent5{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    min-height: 38rem;
+}
+
+/*  END | Parent-05 and childs*/
+
+
+/*  START | Parent-06 and childs*/
+.parent6{
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 30rem;
+}
+
+/*  END | Parent-06 and childs*/
+
+
+/*  START | Parent-07 and childs*/
+.parent7{
+    display: flex;
+    min-height: 38rem;
+}
+
+/*  END | Parent-07 and childs*/
+
+
+/*  START | Parent-08 and childs*/
+.parent8{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 38rem;
+}
+
+/*  END | Parent-08 and childs*/
+
+
+/*  START | Parent-09 and childs*/
+.parent9{
+    display: flex;
+    min-height: 38rem;
+}
+
+/*  END | Parent-09 and childs*/
+
+
+/*  START | Parent-10 and childs*/
+.parent10{
+    display: flex;
+    min-height: 38rem;
+}
+
+.parent10 .child{
+    flex-basis: 50%;
+}
+
+/*  END | Parent-10 and childs*/
+
+
+/* START | footer styles */
+
+
+footer{
+    padding: 1rem;
+    background-color:  rgba(122, 104, 104, 0.7);
+    color: var(--whiteColor);
+    text-align: center;
+    border-top: 1px solid antiquewhite;
+}
+
+/* END | footer styles */
+
+
+/* Media Queries */
+@media screen and (max-width: 992px ){
+
+    .navbar{
+        flex-direction: column;
+    }
+
+    .nav-items{
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .child{
+        width: 8rem;
+        padding: 4rem;
+    }
+
+    .btn-div{
+        width: 90%;
+        height: 15rem;
+        margin: 5rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
+}

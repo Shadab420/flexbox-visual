@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="nav-header">
+                <h2>Flexbox-Visual</h2>
+                <button type="button" class="menu-toggle" onclick="displayMobileMenu()">Menu</button>
+            </div>
+            <ul class="nav-items" id="nav-items">
+                <li onclick="displayMobileMenu()"><a href="#jc">justify-content</a></li>
+                <li onclick="displayMobileMenu()"><a href="#ai">align-items</a></li>
+                <li onclick="displayMobileMenu()"><a href="#as">align-self</a></li>
+                <li onclick="displayMobileMenu()"><a href="#fg">flex-grow</a></li>
+                <li onclick="displayMobileMenu()"><a href="#fs">flex-shrink</a></li>
+                <li onclick="displayMobileMenu()"><a href="#ordr">order</a></li>
+                <li onclick="displayMobileMenu()"><a href="#flex-dir">flex-direction</a></li>
+                <li onclick="displayMobileMenu()"><a href="#flex-wrap">flex-wrap</a></li>
+                <li onclick="displayMobileMenu()"><a href="#ac">align-content</a></li>
+                <li onclick="displayMobileMenu()"><a href="#flex-flow">flex-flow</a></li>
+            </ul>
+
+        </nav>
+    </div>
+    
+
+    <!-- START | Parent 01 -->
+
+    <h1 class="heading" id="jc">justify-content: <span id="jc-span">flex-start</span>;</h1>
+    
+    <div class="btn-div">
+        <div class="single-btn-div">
+            <input type="button" name="jc" value="flex-start"/>
+        </div>
+        
+        <div class="single-btn-div">
+            <input type="button" name="jc" value="center" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="jc" value="flex-end" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="jc" value="space-around"/>
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="jc" value="space-between"/>
+        </div>
+    
+    </div>
+    <div class="parent parent1" id="parent1">
+        <div class="child">
+            1   
+        </div>
+
+        <div class="child">
+            2
+        </div>
+
+        <div class="child">
+            3  
+        </div>
+
+        <div class="child">
+            4  
+        </div>
+
+    </div>
+
+    <!-- END | Parent 01 -->
+
+    <!-- START | Parent 02 -->
+
+    <h1 class="heading" id="ai">align-items: <span id="ai-span">flex-start</span>;</h1>
+    <div class="btn-div">
+        <div class="single-btn-div">
+            <input type="button" name="ai" value="flex-start"/>
+        </div>
+        
+        <div class="single-btn-div">
+            <input type="button" name="ai" value="center" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="ai" value="flex-end" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="ai" value="baseline"/>
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="ai" value="stretch"/>
+        </div>
+    
+    </div>
+
+    <div class="parent parent2" id="parent2">
+        <div class="child child1">
+            1   
+        </div>
+
+        <div class="child">
+            2
+        </div>
+
+        <div class="child">
+            3  
+        </div>
+
+        <div class="child">
+            4  
+        </div>
+        
+    </div>
+
+    <!-- END | Parent 02 -->
+
+
+     <!-- START | Parent 07 -->
+
+     <h1 class="heading" id="as">align-self: <span id="as-span">flex-start</span>;</h1>
+     <div class="btn-div">
+         <span class="item-span">box
+         <select id="child7" value="1">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+         </select>
+         </span>
+
+         <div class="single-btn-div">
+             <input type="button" name="as" value="flex-start"/>
+         </div>
+         
+         <div class="single-btn-div">
+             <input type="button" name="as" value="center" />
+         </div>
+ 
+         <div class="single-btn-div">
+             <input type="button" name="as" value="flex-end" />
+         </div>
+ 
+         <div class="single-btn-div">
+             <input type="button" name="as" value="baseline"/>
+         </div>
+ 
+         <div class="single-btn-div">
+             <input type="button" name="as" value="stretch"/>
+         </div>
+     
+     </div>
+ 
+     <div class="parent parent7" id="parent7">
+         <div class="child child1">
+             1   
+         </div>
+ 
+         <div class="child">
+             2
+         </div>
+ 
+         <div class="child">
+             3  
+         </div>
+ 
+         <div class="child">
+             4  
+         </div>
+         
+     </div>
+ 
+     <!-- END | Parent 07 -->
+
+
+     <!-- START | Parent 08 -->
+
+     <h1 class="heading" id="fg">flex-grow: <span id="flex-grow-span">0</span>;</h1>
+     <div class="btn-div">
+         <span class="item-span">box
+         <select id="child8" value="1">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+         </select>
+         </span>
+
+         <span class="item-span">grow
+            <select id="grow" value="0">
+                <option value="0">0x</option>
+                <option value="1">1x</option>
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+                <option value="4">4x</option>
+            </select>
+            </span>
+     
+     </div>
+ 
+     <div class="parent parent8" id="parent8">
+         <div class="child child1">
+             1   
+         </div>
+ 
+         <div class="child">
+             2
+         </div>
+ 
+         <div class="child">
+             3  
+         </div>
+ 
+         <div class="child">
+             4  
+         </div>
+         
+     </div>
+ 
+     <!-- END | Parent 08 -->
+
+
+     <!-- START | Parent 010 -->
+
+     <h1 class="heading" id="fs">flex-shrink: <span id="flex-shrink-span">0</span>;</h1>
+     <div class="btn-div">
+         <span class="item-span">box
+         <select id="child10" value="1">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+         </select>
+         </span>
+
+         <span class="item-span">shrink
+            <select id="shrink" value="0">
+                <option value="0">0x</option>
+                <option value="1">1x</option>
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+                <option value="4">4x</option>
+            </select>
+            </span>
+     
+     </div>
+ 
+     <div class="parent parent10" id="parent10">
+         <div class="child">
+             1   
+         </div>
+ 
+         <div class="child">
+             2
+         </div>
+ 
+         <div class="child">
+             3  
+         </div>
+ 
+         <div class="child">
+             4  
+         </div>
+         
+     </div>
+ 
+     <!-- END | Parent 10 -->
+
+
+     <!-- START | Parent 09 -->
+
+     <h1 class="heading" id="ordr">order: <span id="order-span">0</span>;</h1>
+     <div class="btn-div">
+         <span class="item-span">box
+         <select id="child9" value="1">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+         </select>
+         </span>
+
+         <span class="item-span">Order
+            <select id="order" value="0">
+                
+                <option value="-1">-1</option>
+                <option value="-2">-2</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            </span>
+     
+     </div>
+ 
+     <div class="parent parent9" id="parent9">
+         <div class="child">
+             1   
+         </div>
+ 
+         <div class="child">
+             2
+         </div>
+ 
+         <div class="child">
+             3  
+         </div>
+ 
+         <div class="child">
+             4  
+         </div>
+         
+     </div>
+ 
+     <!-- END | Parent 09 -->
+
+
+    <!-- START | Parent 03 -->
+
+    <h1 class="heading" id="flex-dir">flex-direction: <span id="flex-dir-span">row</span>;</h1>
+    <div class="btn-div">
+        <div class="single-btn-div">
+            <input type="button" name="flex-dir" value="row"/>
+        </div>
+        
+        <div class="single-btn-div">
+            <input type="button" name="flex-dir" value="row-reverse" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-dir" value="column" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-dir" value="column-reverse"/>
+        </div>
+    
+    </div>
+
+    <div class="parent parent3" id="parent3">
+        <div class="child">
+            1   
+        </div>
+
+        <div class="child">
+            2
+        </div>
+
+        <div class="child">
+            3  
+        </div>
+
+        <div class="child">
+            4  
+        </div>
+        
+    </div>
+
+    <!-- END | Parent 03 -->
+
+
+    <!-- START | Parent 04 -->
+
+    <h1 class="heading" id="flex-wrap">flex-wrap: <span id="flex-wrap-span">wrap</span>;</h1>
+    <div class="btn-div">
+        <div class="single-btn-div">
+            <input type="button" name="flex-wrap" value="wrap"/>
+        </div>
+        
+        <div class="single-btn-div">
+            <input type="button" name="flex-wrap" value="nowrap" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-wrap" value="wrap-reverse" />
+        </div>
+    
+    </div>
+
+    <div class="parent parent4" id="parent4">
+        <div class="child">
+            1   
+        </div>
+
+        <div class="child">
+            2
+        </div>
+
+        <div class="child">
+            3  
+        </div>
+
+        <div class="child">
+            4  
+        </div>
+        <div class="child">
+            5   
+        </div>
+
+        <div class="child">
+            6
+        </div>
+
+        <div class="child">
+            7  
+        </div>
+
+        <div class="child">
+            8  
+        </div>
+
+        <div class="child">
+            9   
+        </div>
+
+        <div class="child">
+            10
+        </div>
+
+        <div class="child">
+            11 
+        </div>
+
+        <div class="child">
+            12 
+        </div>
+        
+    </div>
+
+    <!-- END | Parent 04 -->
+
+
+    <!-- START | Parent 05 -->
+
+    <h1 class="heading" id="ac">align-content: <span id="ac-span">flex-start</span>;</h1>
+    <div class="btn-div">
+        <div class="single-btn-div">
+            <input type="button" name="ac" value="flex-start"/>
+        </div>
+        
+        <div class="single-btn-div">
+            <input type="button" name="ac" value="center" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="ac" value="flex-end" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="ac" value="space-around"/>
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="ac" value="space-between"/>
+        </div>
+    
+    </div>
+
+    <div class="parent parent5" id="parent5">
+        <div class="child">
+            1   
+        </div>
+
+        <div class="child">
+            2
+        </div>
+
+        <div class="child">
+            3  
+        </div>
+
+        <div class="child">
+            4  
+        </div>
+        <div class="child">
+            5   
+        </div>
+
+        <div class="child">
+            6
+        </div>
+
+        <div class="child">
+            7  
+        </div>
+
+        <div class="child">
+            8  
+        </div>
+
+        <div class="child">
+            9   
+        </div>
+
+        <div class="child">
+            10
+        </div>
+
+        <div class="child">
+            11 
+        </div>
+
+        <div class="child">
+            12 
+        </div>
+        
+    </div>
+
+    <!-- END | Parent 05 -->
+
+
+    <!-- START | Parent 06 -->
+
+    <h1 class="heading" id="flex-flow">flex-flow: <span id="flex-flow-span">row wrap</span>;</h1>
+    <div class="btn-div">
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="row wrap"/>
+        </div>
+        
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="row nowrap" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="row wrap-reverse" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="row-reverse wrap"/>
+        </div>
+        
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="row-reverse nowrap" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="row-reverse wrap-reverse" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="column wrap"/>
+        </div>
+        
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="column nowrap" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="column wrap-reverse" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="column-reverse wrap"/>
+        </div>
+        
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="column-reverse nowrap" />
+        </div>
+
+        <div class="single-btn-div">
+            <input type="button" name="flex-flow" value="row-reverse wrap-reverse" />
+        </div>
+    
+    </div>
+
+    <div class="parent parent6" id="parent6">
+        <div class="child">
+            1   
+        </div>
+
+        <div class="child">
+            2
+        </div>
+
+        <div class="child">
+            3  
+        </div>
+
+        <div class="child">
+            4  
+        </div>
+        <div class="child">
+            5   
+        </div>
+
+        <div class="child">
+            6
+        </div>
+
+        <div class="child">
+            7  
+        </div>
+
+        <div class="child">
+            8  
+        </div>
+        <div class="child">
+            9   
+        </div>
+
+        <div class="child">
+            10
+        </div>
+
+        <div class="child">
+            11 
+        </div>
+
+        <div class="child">
+            12 
+        </div>
+        
+    </div>
+
+    <footer>
+        <h3>Copyright &copy; Md. Kazi Shadab Anwar. All rights reserved.</h3>
+    </footer>
+
+    <!-- END | Parent 06 -->
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
